@@ -1,0 +1,188 @@
+Lista de exercícios
+Vetores:
+1-a=[1, 0, 5, -2, -5, 7]
+soma=a[0]+a[1]+a[5]
+print(soma)
+a[4]==100
+print(*a, sep="\n")
+
+2-n=[0, 0, 0, 0, 0, 0]
+for i in range(6):
+    n[i]=int(input("digite um numero\n"))
+print(n)
+
+3-l1=[]
+l2=[]
+i=0
+while i<10:
+    i+=1
+    x=int(input('digite um numero\n'))
+    l1.append(x)
+    l2.append(x*x)
+print('os valores mostrados foram:', l1)
+print('os valores ao quadrado são:', l2)
+
+4-l = [0,1,2,3,4,5,6,7]
+x =int(input("digite o valor de x entre o e 7\n"))
+y =int(input("digite o valor de x entre o e 7\n"))
+soma=l[x]+l[y]
+print(soma)
+
+5-l = []
+for i in range(10):
+    valor = int(input("Digite o valor: "))
+    l.append(valor)
+par = sum(1 for num in l if num%2==0)
+print(f"O vetor possui {par} valores pares.")
+
+6-l=[]
+for i in range(10):
+    x=int(input("Digite um número:"))
+    l.append(x)
+    l.sort()
+    l.reverse()
+print(l)
+
+7-l=[]
+for i in range(10):
+    x=int(input("Digite um número:"))
+    l.append(x)
+    y=max(l)
+print(f"O maior valor da lista:{y}\nSua posição:{l.index(y)}")
+
+8-n=[]
+for i in range(0, 6):
+    l=int(input("digite um numero\n"))
+    n.append(l) 
+print(n[::-1])
+
+9-l1=[]
+i=0
+while i<6:
+    i+=1
+    x=int(input('digite um numero\n'))
+    l1.append(x)
+p = len(l1) - 1 # p é o número de termos e -1 pois a lista começa do 0
+while p > -1: # tem que colocar -1 pq a lista começa do 0 e se for até o 6 vai ter 7 termos 
+    print(l1[p])
+    p-=1 # significa p -1
+
+10-l=[]
+for i in range(15):
+    x=int(input("Digite a nota de um aluno:"))
+    l.append(x)
+    y=sum(l)
+print(f"A média geral é: {y/15}")
+
+11-l=[]
+for i in range(10):
+    x=int(input("Digite um número:"))
+    l.append(x)
+    negativo=0 
+    positivo=0.0
+for num in l:
+    if num > 0:
+        positivo+=num
+    if num < 0:
+        negativo+=1
+print(f"Quantidade de números negativos:{negativo}\nSoma dos números positivos:{positivo}")
+
+12-l=[]
+for i in range(5):
+    x=int(input("Digite um número:"))
+    l.append(x)
+print(f"Os valores da lista:{l}\nO maior valor da lista:{max(l)}\nO menor valor da lista:{min(l)}\nA média dos valores da lista:{sum(l)/5}")
+
+13-l=[]
+for i in range(5):
+    x=int(input("Digite um número:"))
+    l.append(x)
+print(f"Posição do maior valor da lista:{l.index(max(l))}\nPosição do menor valor da lista:{l.index(min(l))}")
+
+14-l=[]
+for i in range(10):
+    x=int(input("Digite um número:"))
+    l.append(x)
+duplicado=set()
+normal=set()
+for num in l:
+    if num in normal:
+        duplicado.add(num)
+    else:
+        normal.add(num)
+if duplicado:
+    print("Valores duplicados encontrados:", duplicado)
+else:
+    print("Não foram encontrados valores duplicados.")
+
+15-l=[]
+for i in range(20):
+    x=int(input("Digite um número:"))
+    l.append(x)
+duplicado=set()
+normal=set()
+for num in l:
+    if num in normal:
+        duplicado.add(num)
+    else:
+        normal.add(num)
+print(normal)
+ 
+16-l=[]
+for i in range(5):
+    x=int(input("Digite um número:"))
+    l.append(x)
+y=int(input("Digite um código dos a seguir:\n 0-finalizar\n 1-ordem direta\n 2-ordem iversa"))
+if y==0:
+    print("Progama finalizado!!!")
+elif y==1:
+    print(l)
+elif y==2:
+    print(l[::-1])
+else:
+    print("Código inválido!!!")
+
+17-l=[]
+for i in range(10):
+    x=int(input("Digite um número:"))
+    l.append(x)
+for i in range(len(l)):
+    if l[i] < 0:
+        l[i] = 0
+print(l)
+
+18-l=[]
+for i in range(10):
+    y=int(input(f"Digite um número: "))
+    l.append(y)
+x=int(input("Digite um número inteiro x: "))
+multiplos = [num for num in l if num % x == 0]
+print(f"Múltiplos de {x} no vetor: {multiplos}")
+print(f"Quantidade de múltiplos de {x}: {len(multiplos)}")
+
+19-l=[]
+for i in range(50):
+    x=(i + 5 * i)%(i + 1)
+    l.append(x)
+print(f"Vetor: {l}")
+
+20-l=[]
+l_impar=[]
+for i in range(10):
+    while True:
+        numero = int(input(f"Digite o {i+1}º número (0 a 50): "))
+        if 0 <= numero <= 50:
+            l.append(numero)
+            if numero % 2 != 0:  # Verifica se é ímpar
+                l_impar.append(numero)
+            break
+        else:
+            print("Número fora do intervalo. Tente novamente.")
+def imprime_vetor(v):
+    for i in range(0, len(v), 2):
+        print(v[i:i+2])
+print("\nVetor original:")
+imprime_vetor(l)
+
+Matriz:
+1-
